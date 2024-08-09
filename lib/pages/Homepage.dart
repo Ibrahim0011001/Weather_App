@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:weatherapp/pages/searchpage.dart';
 
 class Homepage extends StatelessWidget {
   const Homepage({super.key});
@@ -14,9 +15,13 @@ class Homepage extends StatelessWidget {
           ),
           actions: [
             IconButton(
-              icon: Icon(Icons.search),
+              icon: const Icon(Icons.search),
               color: Colors.white,
-              onPressed: () {},
+              onPressed: () {
+                Navigator.of(context).push(MaterialPageRoute(
+                  builder: (context) => const Searchpage(),
+                ));
+              },
             ),
           ]),
     );
